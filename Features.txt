@@ -1,0 +1,59 @@
+Today's session:
+
+Java 8 provides following features for Java Programming:
+
+** Lambda expressions,
+** Method references,
+** Functional interfaces,
+** Stream API,
+** Default methods,
+** Static methods in interface,
+** ForEach() method,
+** Optional class,
+** Collectors class,
+Base64 Encode Decode,
+Parallel array sorting,
+Nashorn JavaScript Engine,
+Parallel Array Sorting,
+Type and Repating Annotations,
+IO Enhancements,
+Concurrency Enhancements,
+JDBC Enhancements
+DateTime API
+------ discussed today ------
+
+
+AtomicInteger ai = new AtomicInteger(0);
+
+List<Employee> list = Arrays.asList(1,2,3,4,5,6,7,8,9,0);
+
+Collections<Employee> newList = list.stream()
+							.filter( e -> e%2 == 2) 					//intemediate
+							.map( e -> e*2 )							//intermediate
+							.reduce(Count() + DISTINCT + ADD + CONCAT) 	//terminal				
+							.collect(Collectors.toList());				//terminal
+							.forEach(e -> {								//terminal
+								ai.getAndIncrement();	
+							});
+							.count() 									//terminal
+//Atomic Data Types
+AtomicInteger
+							
+//method reference >> ContainingClass::staticMethodName(args[])  
+System.out.print(); 	///old
+System.out::println; //after
+Employee::setId; //after
+
+
+------
+ErrorInterface >> common functionality
+
+UtilClass Implements ErrorInterface
+
+MyUtilClass extends UtilClass{
+	
+	@Override
+	error(){
+		dont throw error;
+	}
+}
